@@ -1,5 +1,4 @@
 return [[
-
 sections.WorldESP:Toggle({
     Name = "Enable World ESP",
     Default = false,
