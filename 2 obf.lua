@@ -1,4 +1,24 @@
 return [[
+    
+    Window:Notify({
+        Title = "Hand Visual",
+        Description = "Hand Visual  - ",
+        Lifetime = 5
+    })
+    
+    
+    pcall(function()
+        if PlayerHandSection and PlayerHandSection.Objects and 
+           PlayerHandSection.Objects["EnableHandSkin"] and 
+           type(PlayerHandSection.Objects["EnableHandSkin"].Set) == "function" then
+            PlayerHandSection.Objects["EnableHandSkin"]:Set(false)
+        end
+    end)
+end
+
+sections.WorldESP:Header({
+    Text = "World ESP Settings"
+})
 sections.WorldESP:Toggle({
     Name = "Enable World ESP",
     Default = false,
